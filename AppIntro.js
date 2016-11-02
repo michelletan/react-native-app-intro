@@ -189,6 +189,9 @@ export default class AppIntro extends Component {
   renderPagination = (index, total, context) => {
     let isDoneBtnShow;
     let isSkipBtnShow;
+
+    index = Math.ceil(index);
+
     if (index === total - 1) {
       this.setDoneBtnOpacity(1);
       this.setSkipBtnOpacity(0);
